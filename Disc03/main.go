@@ -27,7 +27,7 @@ var pkgScanner = bufio.NewScanner(os.Stdin)
 var pkgErrMsg = "completed"
 
 func bStdInputName (sName string) bool {
-	var name string
+    var name string
     fmt.Printf("%s", sName)
     pkgScanner.Scan()
     name = pkgScanner.Text()
@@ -36,7 +36,7 @@ func bStdInputName (sName string) bool {
 }
 
 func bStdInputData (sMax string, sBound string) bool {
-	var err error
+    var err error
     var dStr string
     var iMax, iBound int
     fmt.Printf("%s", sMax)
@@ -76,13 +76,13 @@ Input2:
 }
 
 func bArgCalculate (iMax int, iBound int) bool {
-	var xi int
-	var x, y, z float64
-	
-	xi = iBound
-	for i := 0; i < iMax; i++ {
-	    if xi <= iBound {
-		    xi += 1
+    var xi int
+    var x, y, z float64
+
+    xi = iBound
+    for i := 0; i < iMax; i++ {
+        if xi <= iBound {
+            xi += 1
         } else {
             xi = xi / 2
             if xi <= 1 {
@@ -99,19 +99,19 @@ func bArgCalculate (iMax int, iBound int) bool {
 }
 
 func main() {
-	var riS, riX, riY int
+    var riS, riX, riY int
     // fmt.Printf("Chapter %d Start\n", ciChapterId)
     {
     	riS, riX, riY = iArgRequest()
     	if riS == 0 {
-    		bStdInputName(csName1)
+    	    bStdInputName(csName1)
     	} else if riS == 1 {
-    		bStdInputName(csName1)
-	        bStdInputData(csData1, csData2)
+    	    bStdInputName(csName1)
+	    bStdInputData(csData1, csData2)
     	} else if riS == 2 {
-    		bArgCalculate(riX, riY)
+    	    bArgCalculate(riX, riY)
     	} else {
-    		fmt.Printf("%s\n", pkgErrMsg)
+    	    fmt.Printf("%s\n", pkgErrMsg)
     	}
     }
     // fmt.Printf("Chapter %d Exit\n", ciChapterId)
